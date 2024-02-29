@@ -21,7 +21,7 @@ This likely fails on the picroft there you need to run `sudo apt get install pyt
 
 Clone this repo and install dependencies:
 ```
-git clone https://gitlab.mi.hdm-stuttgart.de/heisler/stt-coqui-server.git
+git clone https://github.com/dwfalk/STT-Coqui-Server.git
 cd stt-coui-server
 pip3 install https://github.com/coqui-ai/STT/releases/download/v1.3.0/stt-1.3.0-cp37-cp37m-linux_armv7l.whl
 pip3 install -r requirements.txt
