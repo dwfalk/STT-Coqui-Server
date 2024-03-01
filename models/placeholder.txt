@@ -1,0 +1,5 @@
+Place your *.scorer & *.tflite files here, and reference them in 'application.conf'.
+
+Recommend as per README:
+  model = "models/model.tflite"
+  scorer = "models/large_vocabulary.scorer"
