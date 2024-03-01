@@ -24,7 +24,6 @@ Clone this repo and install dependencies:
 git clone https://github.com/dwfalk/STT-Coqui-Server.git
 cd STT-Coqui-Server
 pip3 install -r requirements.txt
-git clone https://github.com/coqui-ai/STT.git
 ```
 Note that installing `stt` using `pip` might fail with (`ERROR: Could not find a version that satifies the requirement stt`). The command above worked for me and is documented [here](https://github.com/coqui-ai/stt-model-manager#usage)
 
