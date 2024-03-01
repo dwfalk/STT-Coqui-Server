@@ -1,8 +1,8 @@
 # STT Coqui Server
 
-REST API for local STT on Picrofts. Based on [websocket-based server coqui-ai python example](https://github.com/coqui-ai/STT-examples/tree/r1.0/python_websocket_server), [deepspeech rest api](https://github.com/zelo/deepspeech-rest-api) and [DeepSpeech Server](https://github.com/MainRo/deepspeech-server).
+REST API for local STT on Linux. Based on [websocket-based server coqui-ai python example](https://github.com/coqui-ai/STT-examples/tree/r1.0/python_websocket_server), [deepspeech rest api](https://github.com/zelo/deepspeech-rest-api) and [DeepSpeech Server](https://github.com/MainRo/deepspeech-server).
 
-This project implements a REST API for Coqui.ai's Speech To Text models. It is intended to be integrated into Mycroft.ai's Picroft platform. For other usecases you're probably better off using any other [sample code](https://github.com/coqui-ai/STT-examples) from coqui.ai.
+This project implements a REST API for Coqui.ai's Speech To Text models. It is intended to be integrated into Mycroft.ai's platform. For other usecases you're probably better off using any other [sample code](https://github.com/coqui-ai/STT-examples) from coqui.ai.
 
 ## Configuration
 
@@ -26,7 +26,7 @@ cd STT-Coqui-Server
 pip3 install https://github.com/coqui-ai/STT/releases/download/v1.3.0/stt-1.3.0-cp37-cp37m-linux_armv7l.whl
 pip3 install -r requirements.txt
 ```
-Note that installing `stt` using `pip` might fail on a raspberry pi (`ERROR: Could not find a version that satifies the requirement stt`). The command above worked for me and is documented [here](https://github.com/coqui-ai/stt-model-manager#usage)
+Note that installing `stt` using `pip` might fail with (`ERROR: Could not find a version that satifies the requirement stt`). The command above worked for me and is documented [here](https://github.com/coqui-ai/stt-model-manager#usage)
 
 Download pretrained model files into the `models` directory (or the path you specified in the `applications.conf`):
 ```
@@ -55,8 +55,8 @@ After=network.target
 User=pi
 Restart=always
 Type=simple
-WorkingDirectory=/home/pi/coqui_stt/stt-coqui-server
-ExecStart=/home/pi/coqui_stt/stt-venv/bin/python -m stt_server.app
+WorkingDirectory=/opt/STT-Coqui-Server/stt-venv
+ExecStart=/opt/STT-Coqui-Server/stt-venv/bin/python -m stt_server.app
 
 [Install]
 WantedBy=multi-user.target
